@@ -1,4 +1,5 @@
 import {
+  AccountCircle,
   NotificationsNoneOutlined,
   PersonOutlined,
 } from "@mui/icons-material";
@@ -8,7 +9,7 @@ const Header = () => {
   return (
     <div className="h-16 w-full flex items-center justify-between p-10">
       <div className="flex items-center gap-4">
-        <div className="w-7 h-7 bg-slate-700 rounded-full"></div>
+        <AccountCircle color="warning" fontSize="large" />
         <PersonOutlined />
         <NotificationsNoneOutlined />
       </div>

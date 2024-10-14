@@ -9,7 +9,7 @@ export default function Home() {
         <Header />
         <Dashboard />
       </div>
-      <div className="h-full overflow-auto w-[5%]">
+      <div className="h-full overflow-auto shadow-lg w-[5%]">
         <Sidebar />
       </div>
     </div>
