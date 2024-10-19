@@ -1,6 +1,5 @@
 "use client";
 import {
-  AppsOutlined,
   BookOutlined,
   DashboardOutlined,
   Fitbit,
@@ -11,40 +10,30 @@ import {
 import React, { useState } from "react";
 
 const Sidebar = () => {
-  const [activeMenu, setActiveMenu] = useState(6);
+  const [activeMenu, setActiveMenu] = useState(4);
   return (
     <div className="h-full w-full border-r flex flex-col items-center shadow-lg">
       <div className="flex justify-center items-center h-[10%] w-full border-b">
         <Fitbit fontSize="large" color="warning" />
       </div>
-      <div className="flex flex-col gap-16 pt-10 h-[90%] w-full">
-        <div onClick={() => setActiveMenu(1)} className="flex gap-3 flex-row-reverse items-center">
-        <div className="w-3 h-12 bg-orange-500 rounded-r-full"></div>
-          <HomeOutlined className="!text-gray-400 cursor-pointer" />
+      <div className="flex flex-col gap-14 pt-10 h-[90%] w-full">
+        <div onClick={() => setActiveMenu(1)} className={`${activeMenu === 1 && "border-b-[3px] border-orange-500"} mx-4 pb-2 flex gap-3 flex-col-reverse items-center`}>
+          <HomeOutlined className={`!text-gray-400 cursor-pointer ${activeMenu === 1 && "!text-orange-500"}`} />
         </div>
 
-        <div onClick={() => setActiveMenu(1)} className="flex gap-3 flex-row-reverse items-center">
-        <div className="w-3 h-12 bg-orange-500 rounded-r-full"></div>
-          <DashboardOutlined className="!text-gray-400 cursor-pointer" />
+        <div onClick={() => setActiveMenu(2)} className={`${activeMenu === 2 && "border-b-[3px] border-orange-500"} mx-4 pb-2 flex gap-3 flex-col-reverse items-center`}>
+          <DashboardOutlined className={`!text-gray-400 cursor-pointer ${activeMenu === 2 && "!text-orange-500"}`} />
         </div>
 
-        <div onClick={() => setActiveMenu(1)} className="flex gap-3 flex-row-reverse items-center">
-        <div className="w-3 h-12 bg-orange-500 rounded-r-full"></div>
-          <AppsOutlined className="!text-gray-400 cursor-pointer" />
+        <div onClick={() => setActiveMenu(4)} className={`${activeMenu === 4 && "border-b-[3px] border-orange-500"} mx-4 pb-2 flex gap-3 flex-col-reverse items-center`}>
+          <PeopleOutline className={`!text-gray-400 cursor-pointer ${activeMenu === 4 && "!text-orange-500"}`} />
         </div>
 
-        <div onClick={() => setActiveMenu(1)} className="flex gap-3 flex-row-reverse items-center">
-        <div className="w-3 h-12 bg-orange-500 rounded-r-full"></div>
-          <PeopleOutline className="!text-gray-400 cursor-pointer" />
+        <div onClick={() => setActiveMenu(5)} className={`${activeMenu === 5 && "border-b-[3px] border-orange-500"} mx-4 pb-2 flex gap-3 flex-col-reverse items-center`}>
+          <BookOutlined className={`!text-gray-400 cursor-pointer ${activeMenu === 5 && "!text-orange-500"}`} />
         </div>
-
-        <div onClick={() => setActiveMenu(1)} className="flex gap-3 flex-row-reverse items-center">
-        <div className="w-3 h-12 bg-orange-500 rounded-r-full"></div>
-          <BookOutlined className="!text-gray-400 cursor-pointer" />
-        </div>
-        <div onClick={() => setActiveMenu(1)} className="flex gap-3 flex-row-reverse items-center">
-        <div className="w-3 h-12 bg-orange-500 rounded-r-full"></div>
-          <SettingsOutlined className="!text-gray-400 cursor-pointer" />
+        <div onClick={() => setActiveMenu(6)} className={`${activeMenu === 6 && "border-b-[3px] border-orange-500"} mx-4 pb-2 flex gap-3 flex-col-reverse items-center`}>
+          <SettingsOutlined className={`!text-gray-400 cursor-pointer ${activeMenu === 6 && "!text-orange-500"}`} />
         </div>
       </div>
     </div>
